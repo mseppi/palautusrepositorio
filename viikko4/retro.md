@@ -4,4 +4,4 @@ Ensimmäisessä ideana on se, että piirretään julisteeseen ympyrä, jotka jae
 
 Toisessa ideana on se, että listataan sprintin ongelmia, huomioita ja muutoksia listalle ja jokainen luokitellaan joko glad(iloinen), sad(surullinen) tai mad(vihainen). Sitten puhutaan ongelmista siinä järjestyksessä, mikä on saanut eniten ääniä ajan loppuun tai siihen asti, kun kaikki on käyty.
 
-On tärkeää, että scrum-ryhmä löytää itselleen toimivan retrospektiivitekniikan. Sillä oppii todella hyvin ja parantaa itseään. muutos1
+On tärkeää, että scrum-ryhmä löytää itselleen toimivan retrospektiivitekniikan. Sillä oppii todella hyvin ja parantaa itseään.
