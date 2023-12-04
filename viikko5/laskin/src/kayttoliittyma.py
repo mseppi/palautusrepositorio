@@ -14,6 +14,13 @@ class Kayttoliittyma:
         self._sovellus = sovellus
         self._root = root
 
+        self._komennot = {
+            Komento.SUMMA: self._sovellus.plus,
+            Komento.EROTUS: self._sovellus.miinus,
+            Komento.NOLLAUS: self._sovellus.nollaa,
+            Komento.KUMOA: self._sovellus.kumoa
+        }
+
     def kaynnista(self):
         self._arvo_var = StringVar()
         self._arvo_var.set(self._sovellus.arvo())
@@ -62,15 +69,7 @@ class Kayttoliittyma:
         except Exception:
             pass
 
-        if komento == Komento.SUMMA:
-            self._sovellus.plus(arvo)
-        elif komento == Komento.EROTUS:
-            self._sovellus.miinus(arvo)
-        elif komento == Komento.NOLLAUS:
-            self._sovellus.nollaa()
-        elif komento == Komento.KUMOA:
-            pass
-
+        self._komennot[komento](arvo) if komento not in (Komento.NOLLAUS, Komento.KUMOA) else self._komennot[komento]()
         self._kumoa_painike["state"] = constants.NORMAL
 
         if self._sovellus.arvo() == 0:
